@@ -7,8 +7,11 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
-```{r}
-plot(cars)
+```{r echo=TRUE}
+library(tidyverse)
+library(ggplot2)
+cars %>% ggplot() +
+  geom_point(aes(speed, dist, color = speed))
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
